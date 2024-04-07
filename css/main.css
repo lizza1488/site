@@ -1,0 +1,533 @@
+@import "./reset.css";
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+html, body{
+    font-family:'DM Sans','Istok Web' sans-serif, 'Roboto' sans-serif;
+    letter-spacing:  -0.5px;
+    
+    
+}
+
+
+
+.container{
+    margin:0 auto;
+    padding:0 15px;
+    max-width: 1200px;
+   
+}
+
+/* Nav */
+
+.nav{
+    padding: 20px 0;
+    border-bottom: 1px solid #FFF;
+    background-color: #04B2FE ; 
+    color: #FFF;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;   
+    left: 0;   
+    z-index: 9999;   
+    width: 100%;   
+    height: 50px;
+    align-content: center;
+    
+}
+
+.nav-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    row-gap:20px;
+    flex-wrap: wrap;
+    margin-right: -10em;
+    font-family: "Istok Web", sans-serif;
+}
+
+.logo{
+    color: #FFF;
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: bold;
+    transition: 0.5s ease-in-out
+}
+.logo:hover {
+    color: #585858; /* Цвет текста */
+}
+
+
+
+.logo strong{
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing:  0.1em;
+}
+
+
+.nav-list{
+    display: flex;
+    text-align: right;
+    column-gap: 35px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+
+}
+
+.nav-list__link {
+  color: #fff; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.nav-list__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px; 
+    background-color: #585858; 
+    transition: width 0.5s; /* Время эффекта */
+  }
+  
+  .nav-list__link:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px; /* Высота линии */
+    background-color: #585858; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+  } 
+     
+
+/* Header */
+
+.header{
+    padding: 20px 0;
+    min-height: 860px;
+
+    background-color: #171718 0.35;
+    background-image: url("./../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); /* Прозрачный черный цвет */
+  }
+  
+  .content {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.header__wrapper{
+    padding: 0 15px;
+    max-width: 955px;
+}
+
+.header__title{
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    
+    
+}
+
+.header__text {
+    position: relative;
+    z-index: 2; /* Установим позицию текста поверх оверлея */
+  }
+
+.header__title strong{
+    font-family: "Roboto", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.header__title em{
+    font-style: 800;
+    color:#F88BE6
+}
+
+
+.header__text{
+    font-size: 18px;
+    line-height: 1.333;
+}
+
+/*Обо мне*/
+
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.dannye_title {
+    width: 100%; /* Ширина блока 100% от родительского контейнера */
+    text-align: center; /* Выравнивание текста по центру */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 60px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+    padding-top: 50px;
+    color: #04B2FE
+}
+
+.dannye_text {
+    flex-basis: 45%; /* Ширина блока 45% от родительского контейнера */
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+    padding-top: 24px;
+    color: #04B2FE;
+    padding-left: 150px
+}
+
+.dannye_text strong{
+    flex-basis: 45%; /* Ширина блока 45% от родительского контейнера */
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+    padding-top: 24px;
+    color: #171718
+}
+
+.dannye_text_2 {
+    flex-basis: 45%; /* Ширина блока 45% от родительского контейнера */
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+    padding-top: 24px;
+    color: #171718
+}
+
+.dannye_text_2 name{
+    flex-basis: 45%; /* Ширина блока 45% от родительского контейнера */
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+    padding-top: 24px;
+    color: #04B2FE
+}
+
+
+.dannye_text,
+.dannye_text_2,
+.dannye_title,
+.main_container_img {
+    opacity: 0; /* Начальное значение прозрачности */
+    transform: translateY(30px); /* Смещение по оси Y для плавного появления */
+    transition: opacity 0.85s ease-out, transform 0.85s ease-out; /* Добавляем переход для плавного эффекта */
+}
+
+/* Добавляем класс show, который будет применяться к элементам при прокрутке и активировать анимацию */
+.dannye_text.show,
+.dannye_text_2.show,
+.dannye_title.show,
+.main_container_img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.main_container_img {
+    width: 600px; /* Ширина блока 100% от родительского контейнера */
+    margin-top: 20px; /* Отступ сверху */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Биография*/
+
+.section{
+    padding: 70px 0;
+}
+
+.title-1{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #04B2FE;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+
+.biography{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+
+.biography__text {
+    flex-grow: 1; /* Увеличиваем пространство занимаемое основным текстом */
+    font-size: 26px;
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 400;
+}
+
+.biography__text strong{
+    color: #04B2FE;
+}
+
+.image_bio {
+    height: 700px; /* Ширина изображения */
+    width: auto; /* Высота автоматически рассчитывается для поддержания пропорций */
+    margin-left: 50px; /* Отступ справа */
+    border-radius: 15px; /* Задаем радиус скругления углов */
+    display: block;
+    
+}
+  
+
+.title-2{
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: "Cygre", sans-serif;
+
+}
+
+a{ 
+    color:#04B2FE
+
+}
+
+.content-list{
+    margin: 0 auto;
+    min-width: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 40px;
+
+}
+
+
+.content-list__item{
+    font-size: 20px;
+    line-height: 1.5
+    
+}
+
+
+
+
+.content-list__item p{
+    margin-top: 0.5em;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:18px;
+    font-family: "Anonymous+Pro", sans-serif;
+    letter-spacing:-0.5px;
+    width:570px;
+}
+
+/* Регистрация */
+
+.container_reg {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.container_reg h2 {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #04B2FE;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-family: "Anonymous+Pro", sans-serif;
+    letter-spacing: -0.5px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Стилизация поля ввода */
+.container_reg input[type="text"],
+.container_reg input[type="email"],
+.container_reg input[type="password"] {
+    display: block;
+    width: calc(100% - 30px); /* Уменьшим ширину поля на величину отступа, чтобы сохранить внешний вид */
+    padding: 15px;
+    border: none;
+    border-radius: 100px;
+    border: 3px solid #04B2FE;
+    margin-bottom: 20px;
+    margin: 0 auto; /* Центрируем по горизонтали */
+}
+
+.container_reg input[type="text"]::placeholder,
+.container_reg input[type="email"]::placeholder,
+.container_reg input[type="password"]::placeholder {
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+    display: block; /* Делаем подсказку блочным элементом */
+    margin-top: -30px; /* Сдвигаем подсказку наверх */
+    margin-left: 20px; /* Выравниваем подсказку по левому краю */
+    color: #ccc; /* Цвет подсказки */
+}
+
+
+button {
+    display: block; /* Делаем кнопку блочным элементом */
+    margin: 0 auto; /* Центрируем кнопку по горизонтали */
+    margin-top: 20px; /* Добавляем небольшой отступ сверху */
+    padding: 10px 20px;
+    background-color: #04B2FE;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 100px;
+}
+
+button:hover {
+    background-color: #04B2FE; /* Цвет фона */
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #04B2FE; /* Тень в виде рамки */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.registration-image {
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #04B2FE;
+    padding: 60px 0 50px;
+    color: #fff;
+    text-align: center; /* Центрирование содержимого */
+    
+}
+
+.footer__wraper {
+    display: inline-block;
+}
+
+.social {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    column-gap: 50px;
+    align-items: center;
+}
+
+.social__item img {
+    width: 40px;
+    height: auto;
+}
+
+/* Стили для анимации */
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in-animation {
+    animation: fade-in 1.5s ease-out; /* Используем анимацию fade-in в течение 0.5 секунд с плавным выходом */
+  } 
